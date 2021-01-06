@@ -189,13 +189,6 @@ app.get('/api/:username', (req, res) => {
 	});
 });
 
-app.listen(5000, () =>
-  console.log('api listening on port ' + (5000)),
+app.listen((process.env.PORT || 5000), () =>
+  console.log('api listening on port ' + (process.env.PORT || 5000)),
 );
-
-var connect = require('connect');
-var serveStatic = require('serve-static');
-
-connect()
-    .use(serveStatic(__dirname))
-    .listen((process.env.PORT || 80), () => console.log('Server running on ' + (process.env.PORT || 80)));

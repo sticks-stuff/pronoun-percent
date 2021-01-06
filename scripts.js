@@ -21,6 +21,7 @@ const userAction = async (username) => {
 	console.log(myJson.twitterReply.errors[0].message);
 	document.getElementById("error-message").innerHTML = myJson.twitterReply.errors[0].message;
 	document.getElementById("error-message").style.opacity = "1";
+	document.getElementById("loadingGif").style.opacity = "0";
   } else {
 	  // do something with myJson
 	  // console.log(myJson[0].sheThey.length);
@@ -45,6 +46,7 @@ const userAction = async (username) => {
 	  {
 		document.getElementById("error-message").innerHTML = "No data to display!";
 		document.getElementById("error-message").style.opacity = "1";
+	        document.getElementById("loadingGif").style.opacity = "0";
 	  } else {
 	  
 		   var fruits = [heHim, heThey, sheThey, sheHer, theyThem];

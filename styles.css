@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+#container {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	z-index: 2;
+}
+
+
+
+#inputContainer {
+    display: flex;
+	height: 5%;
+	width: 30%;
+	position: relative;
+}
+
+.input-container {
+    display: flex;
+	height: 5vh;
+	width: 30%;
+	position: relative;
+    border: 1px solid #a9a9a9;
+    justify-content: space-between;
+	margin: 10px;
+}
+.input-container input:focus, .input-container input:active {
+    outline: none;
+}
+.input-container input {
+    border: none;
+}
+
+#input-container-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transform: translate(0%, 45vh);
+	transition-property: transform;
+	transition-duration: 1s;
+}
+
+#usernameInput {
+	width: 100%;
+	height: 100%;
+	font-size: larger;
+}
+
+
+button {
+	width: 30%;
+	font-size: larger;
+}
+
+.infoText {
+	bottom: 0;
+	padding: 1em;
+	height: auto;
+	/*position: absolute;*/
+	font-size: 2em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#displayContainer {
+	/*display: none;*/
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	height: auto;
+	width: 100%;
+	position: relative;
+	flex: 1;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 660px) {
+	#displayContainer {
+		height: "";
+	}
+}
+
+#displayContainer > * {
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+	padding: 1em;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.75em;
+	flex: 1;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	flex-direction: column;
+}
+
+#displayContainer > #heHim > .header {
+	background-color: #89CFF0;
+}
+
+#displayContainer > #heThey > .header {
+	background-color: #B6D5D7;
+}
+
+#displayContainer > #sheHer > .header {
+	background-color: #f4c2c2;
+}
+
+#displayContainer > #sheThey > .header {
+	background-color: #E59596;
+}
+
+#displayContainer > #theyThem > .header {
+	background-color: #b19cd9;
+}
+
+#displayContainer > * > .header {
+	padding: 1em;
+	flex: 1;
+}
+
+#displayContainer > * > .list > *  {
+	padding: 0;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	width: 100%;
+	height: 100px;
+}
+
+#displayContainer > * > .list  {
+	width: calc(100% + 2em);
+	flex-direction: column;
+	padding: 0px;
+	margin-top -1em;
+	justify-content: flex-start;
+}
+
+#displayContainer > * > .list > *  > .pfp {
+	flex: 1;
+	padding: 0;
+	height: 50%;
+	width: 33%;
+}
+
+#displayContainer > * > .list > *  > .name {
+	flex: 1;
+	font-size: 0.75em;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+#displayContainer > * > .list > *  > img {
+	object-fit: contain;
+}
+
+#displayContainer > * > * {
+	padding: 0.5em;
+	width: 100%;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	text-align: center;
+}
+
+#displayContainerContainer {
+	flex: 1;
+	display: flex;
+	align-items: stretch;
+	opacity: 0%;
+	transition: opacity 0.5s ease;
+}
+
+.stats {
+	height: auto;
+	background: lightgray;
+	width: calc(100% + 1em) !important;
+}
+
+#error-message {
+	opacity: 0%;
+	transition: opacity 0.5s ease;
+	font-size: large;
+	font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "pronoun-percent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@digitaledgeit/transition-auto": "^0.2.1",
+    "browserify": "^17.0.0",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "get-twitter-followers": "^2.0.0",
+    "serve": "^11.3.2",
+    "serve-static": "^1.14.1",
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1",
+    "twitter-followers": "^0.1.2",
+    "twitter-tokens": "^1.0.3"
+  },
+  "devDependencies": {
+    "@sethvincent/dotenvify": "^1.0.4"
+  }
+}

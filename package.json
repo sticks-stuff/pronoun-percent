@@ -16,7 +16,7 @@
     "dotenv": "^8.2.0",
     "env": "0.0.2",
     "express": "^4.17.1",
-    "get-twitter-followers": "file:/get-twitter-followers",
+    "get-twitter-followers": "file:./get-twitter-followers",
     "serve": "^11.3.2",
     "serve-static": "^1.14.1",
     "twit": "^2.2.11",

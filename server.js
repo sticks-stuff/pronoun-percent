@@ -82,31 +82,15 @@ app.get('/api/:username', (req, res) => {
 			var location = followers[i].location.toLowerCase();
 			
 			//this is awful LOL
-			if ( heHim.some(substring=>bio.includes(substring)) ) {
+			if ( heHim.some(substring => (bio.includes(substring) || location.includes(substring))) ) {
 				heHimCount.push(
 				{
 					screen_name: followers[i].screen_name, 
 					name: followers[i].name, 
 					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
 				});
-			}		
-			else if ( heThey.some(substring=>bio.includes(substring)) && !sheThey.some(substring=>bio.includes(substring)) ) { //bad hardcoded fix to fix she/theys getting mis-identified as he/theys
-				heTheyCount.push(
-				{
-					screen_name: followers[i].screen_name, 
-					name: followers[i].name, 
-					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
-				});
 			}
-			else if ( sheHer.some(substring=>bio.includes(substring)) ) {
-				sheHerCount.push(
-				{
-					screen_name: followers[i].screen_name, 
-					name: followers[i].name, 
-					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
-				});
-			}
-			else if ( sheThey.some(substring=>bio.includes(substring)) ) {
+			else if ( sheThey.some(substring => (bio.includes(substring) || location.includes(substring))) ) { // checked before he/they so that she/theys don't get mislabeled as he/theys
 				sheTheyCount.push(
 				{
 					screen_name: followers[i].screen_name, 
@@ -114,23 +98,7 @@ app.get('/api/:username', (req, res) => {
 					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
 				});
 			}
-			else if ( theyThem.some(substring=>bio.includes(substring)) ) {
-				theyThemCount.push(
-				{
-					screen_name: followers[i].screen_name, 
-					name: followers[i].name, 
-					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
-				});
-			}
-			else if ( heHim.some(substring=>location.includes(substring)) ) {
-				heHimCount.push(
-				{
-					screen_name: followers[i].screen_name, 
-					name: followers[i].name, 
-					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
-				});
-			}		
-			else if ( heThey.some(substring=>location.includes(substring)) ) {
+			else if ( heThey.some(substring => (bio.includes(substring) || location.includes(substring))) ) {
 				heTheyCount.push(
 				{
 					screen_name: followers[i].screen_name, 
@@ -138,7 +106,7 @@ app.get('/api/:username', (req, res) => {
 					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
 				});
 			}
-			else if ( sheHer.some(substring=>location.includes(substring)) ) {
+			else if ( sheHer.some(substring => (bio.includes(substring) || location.includes(substring))) ) {
 				sheHerCount.push(
 				{
 					screen_name: followers[i].screen_name, 
@@ -146,15 +114,7 @@ app.get('/api/:username', (req, res) => {
 					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
 				});
 			}
-			else if ( sheThey.some(substring=>location.includes(substring)) ) {
-				sheTheyCount.push(
-				{
-					screen_name: followers[i].screen_name, 
-					name: followers[i].name, 
-					profile_image_url_https: followers[i].profile_image_url_https.replace("_normal", "_400x400")
-				});
-			}
-			else if ( theyThem.some(substring=>location.includes(substring)) ) {
+			else if ( theyThem.some(substring => (bio.includes(substring) || location.includes(substring))) ) {
 				theyThemCount.push(
 				{
 					screen_name: followers[i].screen_name, 

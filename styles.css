@@ -199,3 +199,10 @@ button {
 	font-size: large;
 	font-family: 'Open Sans', sans-serif;
 }
+
+#loadingGif {
+	position: absolute;
+	right: -9%;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}

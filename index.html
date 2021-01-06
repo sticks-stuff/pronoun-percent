@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="styles.css">
-	
+	<link rel="icon" 
+      type="image/x-icon" 
+      href="./favicon.ico">
 	<title>Pronoun Percentage</title>
 </head>
 	<body>
@@ -12,6 +14,7 @@
 				<div class="input-container">
 					<input type="text" placeholder="Twitter Username..." id="usernameInput">
 					<button onclick="userAction(document.getElementById('usernameInput').value)">Go!</button> 
+					<img id="loadingGif" src="loading.gif">
 				</div>
 				<div id="error-message">
 				</div>

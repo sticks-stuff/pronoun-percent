@@ -1,4 +1,5 @@
 const userAction = async (username) => {
+  document.getElementById("loadingGif").style.opacity = "1";
   document.getElementById("error-message").style.opacity = "0";
   document.getElementById("input-container-container").style.transform = "translate(0%, 45vh)";
   document.getElementsByClassName("infoText")[0].style.position = "absolute";
@@ -91,6 +92,7 @@ const userAction = async (username) => {
 function finished() {
 	document.getElementById("input-container-container").style.transform = "translate(0%, 0%)";
 	document.getElementById("displayContainerContainer").style.display = "flex";
+	document.getElementById("loadingGif").style.opacity = "0";
 	setTimeout(function(){ 
 		document.getElementsByClassName("infoText")[0].style.position = "";
 		document.getElementById("displayContainerContainer").style.opacity = "1";
@@ -101,3 +103,16 @@ function finished() {
 document.getElementsByClassName("infoText")[0].style.position = "absolute";
 document.getElementById("displayContainerContainer").style.display = "none";
 
+ // Get the input field
+var input = document.getElementById("usernameInput");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    userAction(document.getElementById('usernameInput').value);
+  }
+}); 

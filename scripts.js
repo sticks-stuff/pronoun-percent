@@ -6,7 +6,7 @@ const userAction = async (username) => {
   // document.getElementById("displayContainerContainer").style.display = "none";
   document.getElementById("displayContainer").innerHTML = "<div id='heHim'>						<div class='header'>							He/Him						</div>						<div class='stats'>							21% <br> Total: 30						</div>						<div class='list'>						</div>					</div>					<div id='heThey'>						<div class='header'>							He/They						</div>						<div class='stats'>							21% <br> Total: 30						</div>						<div class='list'>						</div>					</div>					<div id='sheHer'>						<div class='header'>							She/Her						</div>						<div class='stats'>							21% <br> Total: 30						</div>						<div class='list'>						</div>					</div>					<div id='sheThey'>						<div class='header'>							She/They						</div>						<div class='stats'>							21% <br> Total: 30						</div>						<div class='list'>						</div>					</div>					<div id='theyThem'>						<div class='header'>							They/Them						</div>						<div class='stats'>							21% <br> Total: 30						</div>						<div class='list'>						</div>					</div>"
   //^ listen do u think i give a shit anymore? 
-  const response = await fetch(window.location.origin + ':5000/api/' + username, {
+  const response = await fetch('https://pronoun-percent.herokuapp.com/api/Thestickman391/api/' + username, {
   // const response = await fetch('http://localhost:8080/api/' + 'Thestickman391' + '.json', {
     method: 'GET',
     headers: {
